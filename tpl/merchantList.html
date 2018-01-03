@@ -1,0 +1,293 @@
+<div id="merchantList">
+    <div class="contentHeader clearfix">
+        <input type="text" placeholder="商家名称"/>
+        <input type="text" placeholder="公司名称"/>
+        <button class="btn btn-info layoutSearch">搜索</button>
+    </div>
+    <div class="contentMains clearfix">
+        <h4>商家列表 <span>Merchant list</span></h4>
+        <table id="merchantTable">
+            <!--<tr>-->
+                <!--<th>-->
+                    <!--<input type="checkbox"/>-->
+                <!--</th>-->
+                <!--<th>商家名称</th>-->
+                <!--<th>地址</th>-->
+                <!--<th>电话</th>-->
+                <!--<th>创建人</th>-->
+                <!--<th>创建时间</th>-->
+                <!--<th>备注</th>-->
+                <!--<th>操作</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>-->
+                    <!--<input type="checkbox"/>-->
+                <!--</td>-->
+                <!--<td>联想</td>-->
+                <!--<td>上地三街</td>-->
+                <!--<td>123456</td>-->
+                <!--<td>李文</td>-->
+                <!--<td>2016-11-10 13:44:42</td>-->
+                <!--<td>备注备注备注-->
+                <!--</td>-->
+                <!--<td>-->
+                    <!--<i class="glyphicon glyphicon-edit"></i>-->
+                    <!--<a class="edit">修改</a>-->
+                <!--</td>-->
+
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>-->
+                    <!--<input type="checkbox"/>-->
+                <!--</td>-->
+                <!--<td>联想</td>-->
+                <!--<td>上地三街</td>-->
+                <!--<td>123456</td>-->
+                <!--<td>李文</td>-->
+                <!--<td>2016-11-10 13:44:42</td>-->
+                <!--<td>-->
+                <!--</td>-->
+                <!--<td>-->
+                    <!--<i class="glyphicon glyphicon-edit"></i>-->
+                    <!--<a class="edit">修改</a>-->
+                <!--</td>-->
+
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>-->
+                    <!--<input type="checkbox"/>-->
+                <!--</td>-->
+                <!--<td>联想</td>-->
+                <!--<td>上地三街</td>-->
+                <!--<td>123456</td>-->
+                <!--<td>李文</td>-->
+                <!--<td>2016-11-10 13:44:42</td>-->
+                <!--<td>-->
+                <!--</td>-->
+                <!--<td>-->
+                    <!--<i class="glyphicon glyphicon-edit"></i>-->
+                    <!--<a class="edit">修改</a>-->
+                <!--</td>-->
+
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>-->
+                    <!--<input type="checkbox"/>-->
+                <!--</td>-->
+                <!--<td>联想</td>-->
+                <!--<td>上地三街</td>-->
+                <!--<td>123456</td>-->
+                <!--<td>李文</td>-->
+                <!--<td>2016-11-10 13:44:42</td>-->
+                <!--<td>-->
+                <!--</td>-->
+                <!--<td>-->
+                    <!--<i class="glyphicon glyphicon-edit"></i>-->
+                    <!--<a class="edit">修改</a>-->
+                <!--</td>-->
+
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>-->
+                    <!--<input type="checkbox"/>-->
+                <!--</td>-->
+                <!--<td>联想</td>-->
+                <!--<td>上地三街</td>-->
+                <!--<td>123456</td>-->
+                <!--<td>李文</td>-->
+                <!--<td>2016-11-10 13:44:42</td>-->
+                <!--<td>-->
+                <!--</td>-->
+                <!--<td>-->
+                    <!--<i class="glyphicon glyphicon-edit"></i>-->
+                    <!--<a class="edit">修改</a>-->
+                <!--</td>-->
+            <!--</tr>-->
+        </table>
+        <button class="btnInfo txtBlue" id="addMerchant">新增商家</button>
+        <button class="btnInfo txtYellow" id="deleteMerchant">删&nbsp;&nbsp;除</button>
+    </div>
+    <script>
+        // 给表格中的操作元素的点击事件
+        window.operateEvents={
+            "click a.edit":function(e,value,row,index){
+                e.stopPropagation();
+                $("#merchantModal .modal-header h4").html("修改商家");
+                $("#merchantName").val(row.merchant);
+                $("#merchantAddress").val(row.address);
+                $("#merchantTel").val(row.tel);
+                $("#merchantComment").val(row.comments);
+                $("#merchantModal").modal("show");
+            }
+        }
+        $("#merchantTable").bootstrapTable({
+            url:"data/merchant.json",
+            method:'get',
+            cache:false,
+            pagination:true,
+            sortable:false,
+            sidePagination:"server",
+            pageNumber:1,
+            pageSize:30,
+            search:false,
+            uniqueId:'id',
+            clickToSelect:true,
+            columns:[{
+                field:"checked",
+                checkbox : true
+            },
+                {
+                    field:"merchant",
+                    title:"商家名称"
+                },
+                {
+                    field:"address",
+                    title:"地址"
+                },
+                {
+                    field:"tel",
+                    title:"电话"
+                },
+                {
+                    field:"creater",
+                    title:"创建人"
+                },
+                {
+                    field:"createTime",
+                    title:"创建时间"
+                },
+                {
+                    field:"comments",
+                    title:"备注"
+                },
+                {
+                    field:"operation",
+                    title:"操作",
+                    events:operateEvents,
+                    formatter:AddFunctionAlty
+                }
+            ]
+        })
+        //                给表格操作列 增加操作的点击元素
+        function AddFunctionAlty(value,row,index){
+            return ` <i class="glyphicon glyphicon-edit"></i><a class="edit">修改</a>`;
+        }
+//        新增按钮点击，弹出弹框
+        $("#addMerchant").click(function(){
+            $("#merchantModal .modal-header h4").html("新增商家");
+            $("#merchantModal input").val("");
+            $("#merchantModal").modal("show");
+        })
+//        保存或修改，弹出的模态框，中的保存按钮的点击事件
+        $("#merchantSave").click(function(){
+            var merchantList={};
+            merchantList.name=$("#merchantName").val();
+            merchantList.account=$("#merchantAccount").val();
+            merchantList.password=$("#merchantPassword").val();
+            merchantList.address=$("#merchantAddress").val();
+            merchantList.tel=$("#merchantTel").val();
+            merchantList.comments=$("#merchantComment").val();
+            console.log(merchantList);
+            $("#merchantModal").modal("hide");
+        })
+//        删除商家
+        $("#deleteMerchant").click(function(){
+            var checkedRows=$('#merchantTable') .bootstrapTable('getAllSelections');
+            if(checkedRows.length==""){
+                deleteBefore();
+            }
+            else{
+                $('#delMerchantModals').modal('show');
+            }
+        })
+//        删除modal中的确定按钮的点击事件
+        $("#deleteSure").click(function(){
+            var checkedRows=$('#merchantTable') .bootstrapTable('getAllSelections');
+            $.each(checkedRows,function(i,o){
+                console.log(o.id);
+            })
+            $('#delMerchantModals').modal('hide');
+        })
+    </script>
+    <!-- deleteModal-->
+    <div class="modal fade" id="delMerchantModals" tabindex="-1" role="dialog">
+        <!--<div class="modal-dialog">-->
+        <div class="modal_content">
+            <header class="modal_header">
+                <h5 class="clearfix">
+                    信息
+                    <span class="pull-right" data-dismiss="modal">&times;</span>
+                </h5>
+            </header>
+            <div class="modal_main">
+                确定删除这个选项?
+            </div>
+            <footer class="modal_footer">
+                <button class="btn btn-info" id="deleteSure">确定</button>
+                <button class="btn btn-default"  data-dismiss="modal">取消</button>
+            </footer>
+        </div>
+        <!--</div>-->
+    </div>
+    <!-- addmodal/reviseModal-->
+    <div class="modal fade" id="merchantModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">新增商家</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <lable class="col-sm-2 control-label" for="">商家名称
+                            </lable>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="merchantName" placeholder="请输入姓名"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-2 control-label" for="inp1">登录账号
+                            </lable>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="merchantAccount" placeholder="账号"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-2 control-label" for="">密码
+                            </lable>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="merchantPassword" placeholder="请输入密码"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-2 control-label" for="inp1">地址
+                            </lable>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="merchantAddress" placeholder="地址"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-2 control-label" for="inp1">电话
+                            </lable>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="merchantTel" placeholder="电话"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-2 control-label" for="inp1">备注
+                            </lable>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="merchantComment" placeholder="备注"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="merchantSave">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

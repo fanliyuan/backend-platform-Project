@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-table.css"/>
+    <link rel="stylesheet" href="css/metroStyle.css"/>
+    <!--<link rel="stylesheet" href="css/zTreeStyle.css"/>-->
+    <link rel="stylesheet" href="css/bootstrap-select.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+
+</head>
+<body id="main">
+    <div id="main_content">
+           <div class="row">
+               <div class="col col-xs-4 col-sm-3 col-md-2 col-lg-2" id="layerLeft">
+                   <h1 class="text-center">AI访客平台</h1>
+                   <div id="expandToggle" data-show="1">隐藏</div>
+                    <div class="panel-group" id="gr1">
+                        <!--<div class="panel panel-default">-->
+                            <!--<div class="panel-heading">-->
+                                <!--<h4 class="panel-title">-->
+                                    <!--<a class="collapsed text-center sumList active" data-toggle="collapse" data-parent="#gr1" href="#gr1_content">系统列表</a>-->
+                                <!--</h4>-->
+                            <!--</div>-->
+                            <!--<div class="panel-collapse collapse in" id="gr1_content">-->
+                                <!--<div class="panel-body">-->
+                                    <!--<ul class="list-unstyled adminList">-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/adminList.html" class="hover">管理员列表</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/roleAdminList.html">角色列表</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/limitList.html">权限列表</a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="panel panel-default">-->
+                            <!--<div class="panel-heading">-->
+                                <!--<h4 class="panel-title">-->
+                                    <!--<a class="collapsed text-center sumList" data-toggle="collapse" data-parent="#gr1" href="#gr2_content">商家列表</a>-->
+                                <!--</h4>-->
+                            <!--</div>-->
+                            <!--<div class="panel-collapse collapse" id="gr2_content">-->
+                                <!--<div class="panel-body">-->
+                                    <!--<ul class="list-unstyled adminList">-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/merchantList.html">商家列表</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/areaList.html">区域列表</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/deviceList.html">终端列表</a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="panel panel-default">-->
+                            <!--<div class="panel-heading">-->
+                                <!--<h4 class="panel-title">-->
+                                    <!--<a class="collapsed text-center sumList" data-toggle="collapse" data-parent="#gr1" href="#gr3_content">员工列表</a>-->
+                                <!--</h4>-->
+                            <!--</div>-->
+                            <!--<div class="panel-collapse collapse" id="gr3_content">-->
+                                <!--<div class="panel-body">-->
+                                    <!--<ul class="list-unstyled adminList">-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/employeeList.html">员工列表</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/visitorList.html">访客列表</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/visitRecordList.html">访客记录列表</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/swingCardRecord.html">刷卡记录</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/blackList.html">黑名单列表</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/deviceOnlineList.html">设备在线列表</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="tpl/sharingBlack.html">共享黑名单</a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+               </div>
+               <!-- 在加载页面片段之前需要执行的公共方法-->
+               <script src="js/index.js"></script>
+               <div class="col col-xs-8 col-sm-9 col-md-10 col-lg-10" id="ContentBg">
+                       <span class="pull-right" id="mainAccount">admin &nbsp;&nbsp;&nbsp;<a href="login.html">退出</a></span>
+                   <div id="classifyContent"></div>
+               </div>
+           </div>
+
+    </div>
+    <!-- 删除前未选中条目的弹框-->
+    <div id="alerts" class="animated  shake">
+        <span>请先选择被删除对象</span>
+    </div>
+
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.ztree.core.js"></script>
+    <script src="js/jquery.ztree.excheck.min.js"></script>
+    <script src="js/jquery.ztree.exedit.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/moment-with-locales.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+    <script src="js/bootstrap-table-zh-CN.js"></script>
+    <!--<script src="js/bootstrap-datetimepicker.fr.js"></script>-->
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

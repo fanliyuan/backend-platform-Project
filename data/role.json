@@ -1,0 +1,16 @@
+{
+  "total":100,"rows":[
+  {
+    "id":1,"checked":"<input type='checkbox' class='indiv'/>","role":"管理员","code":"23","status":"有效","permissions":"管理员列表、角色列表","handle":"<i class='glyphicon glyphicon-edit'></i><a href='#' data-toggle='modal' data-target='#roleLimitModal'>选择权限</a><i class='glyphicon glyphicon-remove'></i><a href='#'>删除</a>"
+  },
+  {
+    "id":2,"checked":"<input type='checkbox' class='indiv'/>","role":"部门管理员","code":"12","status":"有效","permissions":"商家列表","handle":"<i class='glyphicon glyphicon-edit'></i><a href='#' data-toggle='modal' data-target='#roleLimitModal'>选择权限</a><i class='glyphicon glyphicon-remove'></i><a href='#'>删除</a>"
+  },
+  {
+    "id":3,"checked":"<input type='checkbox' class='indiv'/>","role":"组长","code":"13","status":"有效","permissions":"权限列表","handle":"<i class='glyphicon glyphicon-edit'></i><a href='#' data-toggle='modal' data-target='#roleLimitModal'>选择权限</a><i class='glyphicon glyphicon-remove'></i><a href='#'>删除</a>"
+  },
+  {
+    "id":4,"checked":"<input type='checkbox' class='indiv'/>","role":"部长","code":"14","status":"有效","permissions":"终端列表","handle":"<i class='glyphicon glyphicon-edit'></i><a href='#' data-toggle='modal' data-target='#roleLimitModal'>选择权限</a><i class='glyphicon glyphicon-remove'></i><a href='#'>删除</a>"
+  }
+]
+}

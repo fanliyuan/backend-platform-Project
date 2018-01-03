@@ -1,0 +1,588 @@
+<div id="adminList">
+        <div class="contentHeader clearfix">
+            <input type="text" placeholder="管理员姓名"/>
+            <input type="text" placeholder="公司名称"/>
+            <button class="btn btn-info layoutSearch">搜索</button>
+        </div>
+        <div class="contentMains clearfix">
+            <h4>管理员列表 <span>Administrator list</span></h4>
+            <table id="tableAdmin">
+                <!--<tr>-->
+                    <!--<th>-->
+                        <!--<input type="checkbox"/>-->
+                    <!--</th>-->
+                    <!--<th>公司</th>-->
+                    <!--<th>账号</th>-->
+                    <!--<th>账号类型</th>-->
+                    <!--<th>创建人</th>-->
+                    <!--<th>创建时间</th>-->
+                    <!--<th>最后登录时间</th>-->
+                    <!--<th>操作</th>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<input type="checkbox"/>-->
+                    <!--</td>-->
+                    <!--<td>联想</td>-->
+                    <!--<td>admin</td>-->
+                    <!--<td>公司</td>-->
+                    <!--<td>李文</td>-->
+                    <!--<td>2016-11-10 13:44:42</td>-->
+                    <!--<td>2017-11-10 13:44:42</td>-->
+                    <!--<td>-->
+                        <!--<i class="glyphicon glyphicon-eye-close"></i><a href="#">禁止登录</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a data-toggle="modal" data-target="#adminModal">修改</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a href="#">分配角色</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a href="#">分配数据权限</a>-->
+                    <!--</td>-->
+
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<input type="checkbox"/>-->
+                    <!--</td>-->
+                    <!--<td>飞科有限公司</td>-->
+                    <!--<td>admin</td>-->
+                    <!--<td>子公司</td>-->
+                    <!--<td>李文</td>-->
+                    <!--<td>2016-11-10 13:44:42</td>-->
+                    <!--<td>2017-11-10 13:44:42</td>-->
+                    <!--<td>-->
+                        <!--<i class="glyphicon glyphicon-eye-close"></i><a href="#">禁止登录</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a data-toggle="modal" data-target="#adminModal" class="edit">修改</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a href="#">分配角色</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a href="#">分配数据权限</a>-->
+                    <!--</td>-->
+
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<input type="checkbox"/>-->
+                    <!--</td>-->
+                    <!--<td>连恒科技有限公司</td>-->
+                    <!--<td>admin</td>-->
+                    <!--<td>公司</td>-->
+                    <!--<td>李文</td>-->
+                    <!--<td>2016-11-10 13:44:42</td>-->
+                    <!--<td>2017-11-10 13:44:42</td>-->
+                    <!--<td>-->
+                        <!--<i class="glyphicon glyphicon-eye-close"></i><a href="#">禁止登录</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a data-toggle="modal" data-target="#adminModal">修改</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a href="#">分配角色</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a href="#">分配数据权限</a>-->
+                    <!--</td>-->
+
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<input type="checkbox"/>-->
+                    <!--</td>-->
+                    <!--<td>绘色广告公司</td>-->
+                    <!--<td>admin</td>-->
+                    <!--<td>子公司</td>-->
+                    <!--<td>李文</td>-->
+                    <!--<td>2016-11-10 13:44:42</td>-->
+                    <!--<td>2017-11-10 13:44:42</td>-->
+                    <!--<td>-->
+                        <!--<i class="glyphicon glyphicon-eye-close"></i><a href="#">禁止登录</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a data-toggle="modal" data-target="#adminModal">修改</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a href="#">分配角色</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a href="#">分配数据权限</a>-->
+                    <!--</td>-->
+
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<input type="checkbox"/>-->
+                    <!--</td>-->
+                    <!--<td>惠普</td>-->
+                    <!--<td>admin</td>-->
+                    <!--<td>子公司</td>-->
+                    <!--<td>李文</td>-->
+                    <!--<td>2016-11-10 13:44:42</td>-->
+                    <!--<td>2017-11-10 13:44:42</td>-->
+                    <!--<td>-->
+                        <!--<i class="glyphicon glyphicon-eye-close"></i><a data-toggle="modal" data-target="#disableEntryModals">禁止登录</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a data-toggle="modal" data-target="#adminModal">修改</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a href="#">分配角色</a>-->
+                        <!--<i class="glyphicon glyphicon-edit"></i>-->
+                        <!--<a href="#">分配数据权限</a>-->
+                    <!--</td>-->
+                <!--</tr>-->
+            </table>
+            <script>
+                var areaList=null;//从后台得到的区域的json集合
+                var disableId=0;
+               // 给表格中的操作元素的点击事件
+                window.operateEvents={
+                    "click .TAListDisable":function(e,value,row,index){
+                        e.stopPropagation();
+                        disableId=row.id;
+                        $('#disableEntryModals').modal('show');
+                    },
+                    "click .TAListedit":function(e,value,row,index){
+                        e.stopPropagation();
+                        $("#adminName").val(row.creater);
+                        $("#adminAccount").val(row.account);
+                        $("#adminPassword").val(row.accClassify);
+                        $("#adminModal .modal-header h4").html("修改管理员信息");
+                        var areas=row.area.split(",");
+                        var arr=[];//将区域名字放到数组里边
+                        var str="";
+                        var ss=$('#adminModal .bootstrap-select li');
+                        ss.removeClass("selected");
+                        $.each(areas,function(i,o){
+                            $.each(areaList,function(j,obj){
+                                if(obj.id==o){
+                                    arr.push(obj.name);
+                                    str=arr.join(",");
+                                    $.each(ss,function(r,object){
+                                        if($(object).find("a").hasClass(o)){
+                                            $(object).addClass("selected");
+                                            console.log($(ss).find("a").attr("class"));
+                                        }
+                                    })
+                                }
+                            })
+                        })
+                        var companyList=$("#oweCompany option");
+                        $.each(companyList,function(i,o){
+                            if(row.company==$(o).attr("value")){
+                                $(o).attr("selected",true);
+                            }
+                        })
+                        $('#adminModal').modal('show');
+                        $(".oweAreaContent button>span:first-child").html(str);
+                    },
+                    "click .TAListPremission":function(e,value,row,index){
+                        e.stopPropagation();
+                        console.log(e,value,row,index);
+                        $("#premissionModal").modal('show');
+                    },
+                    "click .TAListDataPremission":function(e,value,row,index){
+                        e.stopPropagation();
+                        console.log(e,value,row,index);
+                        $("#dataPremissionModal").modal('show');
+                    }
+                }
+
+
+                $("#tableAdmin").bootstrapTable({
+                    url:"data/table.json",
+                    method:'get',
+                    cache:false,
+                    pagination:true,
+                    sortable:false,
+                    sidePagination:"server",
+                    pageNumber:1,
+                    pageSize:30,
+                    search:false,
+                    uniqueId:'id',
+                    clickToSelect:true,
+                    columns:[{
+                        field:"checked",
+                        checkbox : true
+                    },
+                        {
+                            field:"company",
+                            title:"公司"
+                        },
+                        {
+                            field:"account",
+                            title:"账号"
+                        },
+                        {
+                            field:"accClassify",
+                            title:"账号类型"
+                        },
+                        {
+                            field:"creater",
+                            title:"创建人"
+                        },
+                        {
+                            field:"createTime",
+                            title:"创建时间"
+                        },
+                        {
+                            field:"lastTime",
+                            title:"最后登录时间"
+                        },
+                        {
+                            field:"operation",
+                            title:"操作",
+                            events:operateEvents,
+                            formatter:AddFunctionAlty
+                        }
+                    ]
+                })
+//                给表格操作列 增加操作的点击元素
+                function AddFunctionAlty(value,row,index){
+                    return `<i class='glyphicon glyphicon-eye-close'></i><a class='TAListDisable'>禁止登录</a><i class='glyphicon glyphicon-edit'></i><a  class='TAListedit'>修改</a><i class='glyphicon glyphicon-edit'></i><a class='TAListPremission'>分配角色</a><i class='glyphicon glyphicon-edit'></i><a class='TAListDataPremission'>分配数据权限</a>`;
+                }
+//
+            </script>
+            <button class="btnInfo txtBlue" id="addNewAdmin">新增管理员</button>
+            <button class="btnInfo txtYellow" id="deleteAdmin">删除管理员</button>
+            <!--<div class=" pull-right" id="ceshi">-->
+                <!--<ul class="pagination">-->
+                    <!--<li>-->
+                        <!--<span class="sumCount">共27条</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#">1</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#">2</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#">下一页</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!-- dataPremission-->
+            <div class="modal fade" id="dataPremissionModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                            <h4 class="modal-title">分配数据权限</h4>
+                        </div>
+                        <div class="modal-body ztree" id="dataPerContent">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary" id="dataPreInfoEdit">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- premission-->
+            <div class="modal fade" id="premissionModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                            <h4 class="modal-title">分配角色</h4>
+                        </div>
+                        <div class="modal-body">
+                            <ul class="list-group">
+                                <!--<li class="list-group-item">-->
+                                    <!--<input type="checkbox"/><span> 部长</span>-->
+                                <!--</li>-->
+                                <!--<li class="list-group-item">-->
+                                    <!--<input type="checkbox"/><span> 部长</span>-->
+                                <!--</li>-->
+                                <!--<li class="list-group-item">-->
+                                    <!--<input type="checkbox"/><span> 管理员</span>-->
+                                <!--</li>-->
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary" id="premissionInfoEdit">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- addmodal/reviseModal-->
+            <div class="modal fade" id="adminModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                            <h4 class="modal-title">新增管理员</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <lable class="col-sm-2 control-label" for="">姓名
+                                    </lable>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="adminName" placeholder="请输入姓名"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <lable class="col-sm-2 control-label" for="inp1">登录账号
+                                    </lable>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="adminAccount" placeholder="账号"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <lable class="col-sm-2 control-label" for="">密码
+                                    </lable>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="adminPassword" placeholder="请输入密码"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <lable class="col-sm-2 control-label" for="">所属公司
+                                    </lable>
+                                    <div class="col-sm-10">
+                                        <select id="oweCompany" class="form-control">
+                                            <!--<option selected value="0">正腾科技股份有限公司</option>-->
+                                            <!--<option value="3">联想科技股份有限公司</option>-->
+                                            <!--<option value="6">汇桥科技股份有限公司</option>-->
+                                            <!--<option value="5">惠普科技股份有限公司</option>-->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <lable class="col-sm-2 control-label" for="">所属区域
+                                    </lable>
+                                    <div class="col-sm-10 oweAreaContent">
+                                        <select name="oweArea" class="selectpicker show-tick form-control" multiple data-live-search="false" id="oweArea">
+                                            <!--<option value="11" class="11">正腾科技股份有限公司</option>-->
+                                            <!--<option value="22" class="22">联想科技股份有限公司</option>-->
+                                            <!--<option value="44" class="44">汇桥科技股份有限公司</option>-->
+                                            <!--<option value="55" class="55">惠普科技股份有限公司</option>-->
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary" id="adminInfoEdit">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- disabled entry-->
+            <div class="modal fade" id="disableEntryModals" tabindex="-1" role="dialog">
+                <!--<div class="modal-dialog">-->
+                <div class="modal_content">
+                    <header class="modal_header">
+                        <h5 class="clearfix">
+                            信息
+                            <span class="pull-right" data-dismiss="modal">&times;</span>
+                        </h5>
+                    </header>
+                    <div class="modal_main">
+                        确定禁止登录?
+                    </div>
+                    <footer class="modal_footer">
+                        <button class="btn btn-info disableSure">确定</button>
+                        <button class="btn btn-default"  data-dismiss="modal">取消</button>
+                    </footer>
+                </div>
+                <!--</div>-->
+            </div>
+            <!-- deleteModal-->
+            <div class="modal fade" id="deleteModals" tabindex="-1" role="dialog">
+                <!--<div class="modal-dialog">-->
+                <div class="modal_content">
+                    <header class="modal_header">
+                        <h5 class="clearfix">
+                            信息
+                            <span class="pull-right" data-dismiss="modal">&times;</span>
+                        </h5>
+                    </header>
+                    <div class="modal_main">
+                        确定删除这个选项?
+                    </div>
+                    <footer class="modal_footer">
+                        <button class="btn btn-info" id="deleteSure">确定</button>
+                        <button class="btn btn-default"  data-dismiss="modal">取消</button>
+                    </footer>
+                </div>
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+<script>
+
+   // <!-- 分配角色的弹出框中-->
+//        $("#premissionModal .modal-body .list-group").on("click","li",function(){
+//            $(this).toggleClass("active");
+//            if($(this).hasClass("active")){
+//                $(this).find("input").prop("checked",true);
+//            }
+//            else{
+//                $(this).find("input").prop("checked",false);
+//            }
+//        })
+//暂存chekced的树形结构的id组合
+   var idList=[];
+    //<!--分配角色的 -->
+    $.ajax({
+        type:"get",
+        url:"data/role.json",
+        dataType:"json",
+        success:function(data){
+            data=data.rows;
+            var html="";
+            $.each(data,function(i,o){
+                html+=`<li class="list-group-item"><input type="checkbox" class="${o.id}"/><span> ${o.role}</span></li>`;
+            })
+            $("#premissionModal .modal-body .list-group").html(html);
+        }
+    })
+//
+    $("#deleteAdmin").click(function(){
+        var checkedRows=$('#tableAdmin') .bootstrapTable('getAllSelections');
+        if(checkedRows.length==""){
+            deleteBefore();
+        }
+        else{
+            $.each(checkedRows,function(i,o){
+                console.log(o.id);
+            })
+            $('#deleteModals').modal('show');
+        }
+
+    })
+    $("#addNewAdmin").click(function(){
+        $('#adminModal').modal('show');
+        $('#adminModal input,#oweCompany').val("");
+        $("#oweArea").selectpicker("val","");
+        $("#adminModal .modal-header h4").html("新增管理员");
+    })
+    $('#oweArea').selectpicker({
+        'selectedText': 'cat'
+    });
+//    $('#adminModal').on('show.bs.modal', function () {
+//       在新增管理员弹框弹出之hou需要调用的方法
+        $.ajax({
+            type:"get",
+            dataType:"json",
+            url:"data/area.json",
+            success:function(data){
+                areaList=data.rows;
+                var html="";
+                $.each(data.rows,function(i,o){
+                    html+=` <option value="11" class="${o.id}">${o.name}</option>`;
+                })
+                $("#oweArea").html(html);
+                $('#oweArea').selectpicker("refresh");
+            }
+        })
+
+//    })
+//请求公司的ajax
+   $.ajax({
+       type:"get",
+       url:"data/company.json",
+       dataType:"json",
+       success:function(data){
+           var html="";
+           $.each(data.company,function(i,o){
+               html+=`<option value="${o.id}">${o.name}</option>`;
+           })
+           $("#oweCompany").html(html);
+       }
+   })
+    $("#adminInfoEdit").click(function(){
+        $('#adminModal').modal('hide');
+        var company=$("#oweCompany")[0];
+        alert("所属公司"+company.options[company.selectedIndex].value);
+            var ss=$('#adminModal .bootstrap-select li');
+        $.each(ss,function(i,o){
+            if($(o).hasClass("selected")){
+                console.log($(o).find("a").attr("class"));
+            }
+        })
+
+    })
+   //删除弹框的确定点击功能
+   function deleteSure(){
+       $("#deleteSure").click(function(){
+           var idList=[];//暂存checkbox 为checked的行数据的id
+           var selectedList=$("#tableAdmin tbody input").parent().parent();
+           $.each(selectedList,function(i,o){
+               if($(o).hasClass("selected")){
+                   var ids=$(o).attr("data-uniqueid");
+                   idList.push(ids);
+               }
+           })
+           console.dir(idList);
+           $('#deleteModals').modal('hide');
+       })
+   }
+//   删除确定的点击事件
+   deleteSure();
+   //   关闭分配角色弹出框
+    $("#premissionInfoEdit").click(function(){
+        var list=$("#premissionModal .modal-body  input");
+        var arr=[];
+        $.each(list,function(i,o){
+            if($(o).prop("checked")){
+                var str=$(o).attr("class");
+                arr.push(str);
+            }
+        })
+        console.dir(arr);
+        $('#premissionModal').modal('hide');
+    })
+   $("#dataPreInfoEdit").click(function(){
+       $('#dataPremissionModal').modal('hide');
+       console.log("得到的area的id是"+idList);
+   })
+
+   $(function(){
+       //   树形结构的 数据权限
+       var setting = {
+           check: {
+               enable: true
+           },
+           async: {
+               enable: true,
+               url:"data/getNodes.php",
+               autoParam:["id"],
+//				dataFilter: filter,
+               type: "get"
+           },
+        callback: {
+//				beforeAsync: beforeAsync,
+                onClick: zTreeClick,
+                onCheck:zTreeCheck
+//				onAsyncSuccess: onAsyncSuccess,
+//				onAsyncError: onAsyncError
+        }
+       };
+//       function beforeAsync(treeId,treeNode) {
+//           console.log(treeNode.id);
+//       }
+
+       function zTreeCheck(event,treeId, treeNode) {
+           var checkedArr = [];//存放被选中的树结构的 ID和父节点id
+           var treeObj = $.fn.zTree.getZTreeObj("dataPerContent"),
+                   nodes = treeObj.getCheckedNodes(true);
+           var pid = 0;
+           for (var i = 0; i < nodes.length; i++) {
+
+               if (nodes[i].level != 0 ) {
+                   checkedArr.push(nodes[i].id);
+               }
+           }
+           idList=checkedArr;
+       }
+       function zTreeClick(event,treeId, treeNode,lickFlag){
+
+
+
+       }
+
+       $.fn.zTree.init($("#dataPerContent"), setting);
+       //-->
+   })
+    $("#disableEntryModals").on("click",".disableSure",function(){
+        console.log(disableId);
+        $('#disableEntryModals').modal('hide');
+    })
+</script>

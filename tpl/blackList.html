@@ -1,0 +1,174 @@
+<div id="blackList">
+    <div class="contentHeader clearfix">
+        <input type="text" placeholder="姓名/身份证号"/>
+        <button class="btn btn-info layoutSearch">搜索</button>
+    </div>
+    <div class="contentMains clearfix">
+        <h4>黑名单列表 <span>Blacklist list</span></h4>
+        <div class="row">
+            <div class="col col-sm-2">
+                <ul id="treeEmployer" class="ztree"></ul>
+            </div>
+            <div class="col col-sm-10">
+                <table id="blackTable">
+                    <!--<tr>-->
+                        <!--<th>访客姓名</th>-->
+                        <!--<th>性别</th>-->
+                        <!--<th>地址</th>-->
+                        <!--<th>身份证号</th>-->
+                        <!--<th>手机号</th>-->
+                        <!--<th>原因</th>-->
+                        <!--<th>创建时间</th>-->
+                        <!--<th>操作</th>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>唐先锋</td>-->
+                        <!--<td>男</td>-->
+                        <!--<td>河北省保定市</td>-->
+                        <!--<td>156456199002205462</td>-->
+                        <!--<td>15656665456</td>-->
+                        <!--<td>恶意操作</td>-->
+                        <!--<td>2017-10-20 13:00:22</td>-->
+                        <!--<td><i class="glyphicon glyphicon-share-alt"></i><a href="#">加入共享</a></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>张志</td>-->
+                        <!--<td>男</td>-->
+                        <!--<td>河北省保定市</td>-->
+                        <!--<td>156456199002205462</td>-->
+                        <!--<td>15656665456</td>-->
+                        <!--<td>有前科</td>-->
+                        <!--<td>2017-10-20 13:00:22</td>-->
+                        <!--<td><i class="glyphicon glyphicon-share-alt"></i><a href="#">加入共享</a></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>李先锋</td>-->
+                        <!--<td>男</td>-->
+                        <!--<td>河北省张家口</td>-->
+                        <!--<td>156456199002205462</td>-->
+                        <!--<td>15656665456</td>-->
+                        <!--<td>诈骗</td>-->
+                        <!--<td>2017-10-20 13:00:22</td>-->
+                        <!--<td><i class="glyphicon glyphicon-share-alt"></i><a href="#">加入共享</a></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>王高</td>-->
+                        <!--<td>男</td>-->
+                        <!--<td>河南省洛阳市</td>-->
+                        <!--<td>156456199002205462</td>-->
+                        <!--<td>15656665456</td>-->
+                        <!--<td>多次上访</td>-->
+                        <!--<td>2017-10-20 13:00:22</td>-->
+                        <!--<td><i class="glyphicon glyphicon-share-alt"></i><a href="#">加入共享</a></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>张章</td>-->
+                        <!--<td>男</td>-->
+                        <!--<td>河北省保定市</td>-->
+                        <!--<td>156456199002205462</td>-->
+                        <!--<td>15656665456</td>-->
+                        <!--<td>犯罪</td>-->
+                        <!--<td>2017-10-20 13:00:22</td>-->
+                        <!--<td><i class="glyphicon glyphicon-share-alt"></i><a href="#">加入共享</a></td>-->
+                    <!--</tr>-->
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- addShare-->
+    <div class="modal fade" id="addShareModals" tabindex="-1" role="dialog">
+        <!--<div class="modal-dialog">-->
+        <div class="modal_content">
+            <header class="modal_header">
+                <h5 class="clearfix">
+                    信息
+                    <span class="pull-right" data-dismiss="modal">&times;</span>
+                </h5>
+            </header>
+            <div class="modal_main">
+                确定加入共享黑名单?
+            </div>
+            <footer class="modal_footer">
+                <button class="btn btn-info addShareSure">确定</button>
+                <button class="btn btn-default"  data-dismiss="modal">取消</button>
+            </footer>
+        </div>
+        <!--</div>-->
+    </div>
+    <!--<script src="js/getTree.js"></script>-->
+    <script>
+        getTrees();
+        var shareId=0;//加入共享的行的id
+        // 给表格中的操作元素的点击事件
+        window.operateEvents={
+            "click a.addShare":function(e,value,row,index){
+                e.stopPropagation();
+                $("#addShareModals").modal("show");
+                shareId=row.id;
+            }
+        }
+        $(function(){
+            $("#expandToggle").unbind("click");
+            //        树形结构隐藏和显示功能
+            toggleShow();
+        })
+        //table的显示
+        $("#blackTable").bootstrapTable({
+            url:"data/black.json",
+            method:'get',
+            cache:false,
+            pagination:true,
+            sortable:false,
+            sidePagination:"server",
+            pageNumber:1,
+            pageSize:30,
+            search:false,
+            uniqueId:'id',
+            clickToSelect:true,
+            columns:[
+                {
+                    field:"visitor",
+                    title:"访客姓名"
+                },
+                {
+                    field:"sex",
+                    title:"性别"
+                },
+                {
+                    field:"address",
+                    title:"地址"
+                },
+                {
+                    field:"tel",
+                    title:"手机号"
+                },
+                {
+                    field:"IDNum",
+                    title:"身份证号"
+                },
+                {
+                    field:"reason",
+                    title:"原因"
+                },
+                {
+                    field:"createTime",
+                    title:"创建时间"
+                },
+                {
+                    field:"operation",
+                    title:"操作",
+                    events:operateEvents,
+                    formatter:AddFunctionAlty
+                }
+            ]
+        })
+        //                给表格操作列 增加操作的点击元素
+        function AddFunctionAlty(value,row,index){
+            return `<i class="glyphicon glyphicon-share-alt"></i><a class="addShare">加入共享</a>`;
+        }
+        $("#addShareModals .addShareSure").click(function(){
+            console.log(shareId);
+            $("#addShareModals").modal("hide");
+        })
+    </script>
+</div>

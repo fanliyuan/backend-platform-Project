@@ -1,0 +1,201 @@
+<div id="visitRecordList">
+    <div class="contentHeader clearfix">
+        <input type="text" placeholder="访客姓名"/>
+        <div class="timePicker">
+            <div class="input-group date" id="startTime">
+                <input type="text" class="form-control" placeholder="开始时间"/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+        <div class="timePicker">
+            <div class="input-group date" id="endTime">
+                <input type="text" class="form-control" placeholder="结束时间"/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+        <button class="btn btn-info layoutSearch">搜索</button>
+    </div>
+    <div class="contentMains clearfix">
+        <h4>访客记录列表 <span>Visitor record list</span></h4>
+        <div class="row">
+            <div class="col col-sm-2">
+                <ul id="treeEmployer" class="ztree"></ul>
+            </div>
+            <div class="col col-sm-10">
+                <table id="visitorRdTb">
+                    <!--<tr>-->
+                    <!--<th>-->
+                    <!--随行-->
+                    <!--</th>-->
+                    <!--<th>状态</th>-->
+                    <!--<th>访客姓名</th>-->
+                    <!--<th>被访人姓名</th>-->
+                    <!--<th>开始时间</th>-->
+                    <!--<th>结束时间</th>-->
+                    <!--<th>注销时间</th>-->
+                    <!--<th>来访事由</th>-->
+                    <!--<th>来访单位</th>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>-->
+                    <!--<span class="badge bg-danger">0</span>-->
+                    <!--</td>-->
+                    <!--<td>进行中</td>-->
+                    <!--<td>徐艳茹</td>-->
+                    <!--<td>管理员</td>-->
+                    <!--<td>2017-11-15 14:49:00</td>-->
+                    <!--<td>2017-11-15 14:49:00</td>-->
+                    <!--<td>未注销</td>-->
+                    <!--<td>开会</td>-->
+                    <!--<td>未设置</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>-->
+                    <!--<span class="badge bg-danger">0</span>-->
+                    <!--</td>-->
+                    <!--<td>进行中</td>-->
+                    <!--<td>张开</td>-->
+                    <!--<td>管理员</td>-->
+                    <!--<td>2017-11-15 14:49:00</td>-->
+                    <!--<td>2017-11-15 14:49:00</td>-->
+                    <!--<td>未注销</td>-->
+                    <!--<td>开会</td>-->
+                    <!--<td>未设置</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>-->
+                    <!--<span class="badge bg-danger">0</span>-->
+                    <!--</td>-->
+                    <!--<td>进行中</td>-->
+                    <!--<td>李芬芬</td>-->
+                    <!--<td>管理员</td>-->
+                    <!--<td>2017-11-15 14:49:00</td>-->
+                    <!--<td>2017-11-15 14:49:00</td>-->
+                    <!--<td>未注销</td>-->
+                    <!--<td>开会</td>-->
+                    <!--<td>未设置</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>-->
+                    <!--<span class="badge bg-danger">0</span>-->
+                    <!--</td>-->
+                    <!--<td>进行中</td>-->
+                    <!--<td>王辉</td>-->
+                    <!--<td>管理员</td>-->
+                    <!--<td>2017-11-15 14:49:00</td>-->
+                    <!--<td>2017-11-15 14:49:00</td>-->
+                    <!--<td>未注销</td>-->
+                    <!--<td>开会</td>-->
+                    <!--<td>未设置</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>-->
+                    <!--<span class="badge bg-danger">0</span>-->
+                    <!--</td>-->
+                    <!--<td>进行中</td>-->
+                    <!--<td>赵佳</td>-->
+                    <!--<td>管理员</td>-->
+                    <!--<td>2017-11-15 14:49:00</td>-->
+                    <!--<td>2017-11-15 14:49:00</td>-->
+                    <!--<td>未注销</td>-->
+                    <!--<td>开会</td>-->
+                    <!--<td>未设置</td>-->
+                    <!--</tr>-->
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--<script src="js/getTree.js"></script>-->
+    <script>
+        getTrees();
+        //时间插件
+        $(function(){
+            $('#startTime').datetimepicker({
+//                minView: 0,            //设置时间选择为年月日 去掉时分秒选择
+//                format:'yyyy-mm-dd',
+//                    weekStart: 1,
+//                    todayBtn:  1,
+                    autoclose: 1,
+                    todayHighlight: 1,
+//                    startView: 2,
+//                    forceParse: 0,
+                    showMeridian: 1,
+                    language: 'zh-CN'
+        });
+            $('#endTime').datetimepicker({
+                autoclose: 1,
+                todayHighlight: 1,
+                showMeridian: 1,
+                language: 'zh-CN'
+            });
+        })
+        //table插件
+        $("#visitorRdTb").bootstrapTable({
+            url:"data/visitorListRecord.json",
+            method:'get',
+            cache:false,
+            pagination:true,
+            sortable:false,
+            sidePagination:"server",
+            pageNumber:1,
+            pageSize:30,
+            search:false,
+            uniqueId:'id',
+            clickToSelect:true,
+            columns:[
+                {
+                    field:"follower",
+                    title:"随行",
+                    formatter:AddFunctionAlty
+                },
+                {
+                    field:"status",
+                    title:"状态"
+                },
+                {
+                    field:"visitor",
+                    title:"访客姓名"
+                },
+                {
+                    field:"visited",
+                    title:"被访人姓名"
+                },
+                {
+                    field:"startTime",
+                    title:"开始时间"
+                },
+                {
+                    field:"endTime",
+                    title:"结束时间"
+                },
+                {
+                    field:"logOffTime",
+                    title:"注销时间"
+                },
+                {
+                    field:"reason",
+                    title:"来访事由"
+                },
+                {
+                    field:"company",
+                    title:"来访单位"
+                }
+            ]
+        })
+//                给表格随行人员列增加元素
+        function AddFunctionAlty(value,row,index){
+            if(row.follow>0){
+                return `<span class="badge active">${row.follow}</span>`;
+            }
+            else {
+                return `<span class="badge">${row.follow}</span>`;
+            }
+
+        }
+
+    </script>
+</div>

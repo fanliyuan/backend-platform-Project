@@ -1,0 +1,199 @@
+{"data":[
+  {
+    "id": 1,
+    "url": "gr1_content",
+    "name": "系统列表",
+    "iconUrl": null,
+    "parentId": 0,
+    "isButtonPer": 0,
+    "order": null,
+    "oid":"1",
+    "checked":"1",
+    "child": [
+      {
+        "id": 2,
+        "url": "tpl/adminList.html",
+        "name": "管理员列表",
+        "iconUrl": null,
+        "parentId": 1,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "child": null,
+        "checked":"1"
+      },
+      {
+        "id": 3,
+        "url": "tpl/roleAdminList.html",
+        "name": "角色列表",
+        "iconUrl": null,
+        "parentId": 1,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"2",
+        "child": null,
+        "checked":"0"
+      },
+      {
+        "id": 4,
+        "url": "tpl/limitList.html",
+        "name": "权限列表",
+        "iconUrl": null,
+        "parentId": 1,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"3",
+        "child": null,
+        "checked":"1"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "url": "gr2_content",
+    "name": "商家列表",
+    "iconUrl": null,
+    "parentId": 0,
+    "isButtonPer": 0,
+    "order": null,
+    "oid":"2",
+    "checked":"1",
+    "child": [
+      {
+        "id": 6,
+        "url": "tpl/merchantList.html",
+        "name": "商家列表",
+        "iconUrl": null,
+        "parentId": 5,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "checked":"1",
+        "child": null
+      },
+      {
+        "id": 7,
+        "url": "tpl/areaList.html",
+        "name": "区域列表",
+        "iconUrl": null,
+        "parentId": 5,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "checked":"1",
+        "child": null
+      },
+      {
+        "id": 8,
+        "url": "tpl/deviceList.html",
+        "name": "终端列表",
+        "iconUrl": null,
+        "parentId": 5,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "checked":"1",
+        "child": null
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "url": "gr3_content",
+    "name": "员工列表",
+    "iconUrl": null,
+    "parentId": 0,
+    "isButtonPer": 0,
+    "order": null,
+    "oid":"1",
+    "checked":"1",
+    "child": [
+      {
+        "id": 10,
+        "url": "tpl/employeeList.html",
+        "name": "员工列表",
+        "iconUrl": null,
+        "parentId": 9,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "checked":"1",
+        "child": null
+      },
+      {
+        "id": 11,
+        "url": "tpl/visitorList.html",
+        "name": "访客列表",
+        "iconUrl": null,
+        "parentId": 9,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "checked":"1",
+        "child": null
+      },
+      {
+        "id": 12,
+        "url": "tpl/visitRecordList.html",
+        "name": "访客记录列表",
+        "iconUrl": null,
+        "parentId": 9,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "checked":"1",
+        "child": null
+      },
+      {
+        "id": 13,
+        "url": "tpl/swingCardRecord.html",
+        "name": "刷卡记录",
+        "iconUrl": null,
+        "parentId": 9,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "checked":"1",
+        "child": null
+      },
+      {
+        "id": 14,
+        "url": "tpl/blackList.html",
+        "name": "黑名单列表",
+        "iconUrl": null,
+        "parentId": 9,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "checked":"1",
+        "child": null
+      },
+      {
+        "id": 15,
+        "url": "tpl/deviceOnlineList.html",
+        "name": "设备在线列表",
+        "iconUrl": null,
+        "parentId": 9,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "checked":"1",
+        "child": null
+      },
+      {
+        "id": 16,
+        "url": "tpl/sharingBlack.html",
+        "name": "共享黑名单",
+        "iconUrl": null,
+        "parentId": 9,
+        "isButtonPer": 0,
+        "order": null,
+        "oid":"1",
+        "checked":"1",
+        "child": null
+      }
+
+    ]
+  }
+]
+}

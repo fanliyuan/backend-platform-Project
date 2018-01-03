@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+</head>
+<body>
+<ul id="login_bg" class="list-unstyled">
+    <li id="bg01">
+    </li>
+    <li id="bg02">
+    </li>
+    <li id="bg03">
+    </li>
+</ul>
+<div id="login_content" class="text-center">
+    <h3 class="text-center">AI访客管理平台</h3>
+    <h4 class="text-center" class="animated shake">登录</h4>
+    <form id="loginForm">
+        <input type="text" placeholder="请输入用户名" class="username" name="account" id="username" required/>
+        <input type="password" placeholder="请输入密码" name="password" id="psd" required/>
+        <div class="text-left">
+            <input type="checkbox" id="isCheck"/><label for="isCheck">&nbsp;&nbsp;记住我</label>
+        </div>
+        <button id="loginBtn">登录</button>
+        <div id="Empty_error">
+            <p>+</p>
+        </div>
+        <div id="alertInfo">用户名或密码错误</div>
+    </form>
+</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<div id="deviceOnlineList">
+    <h2>设备在线列表</h2>
+    <hr/>
+    <div class="form-group">
+        <input type="text" placeholder="输入设备名称" class="form-control" style="width:300px"/>
+    </div>
+    <div class="form-group">
+        <select class="form-control">
+            <option selected>在线</option>
+            <option>离线</option>
+        </select>
+    </div>
+    <button class="btn btn-primary">查询</button>
+    <hr/>
+    <div class="row">
+        <div class="col col-sm-2">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#deviceList1" data-parent="#compSum" data-toggle="collapse">联想</a>
+                        </h4>
+                    </div>
+                    <div id="deviceList1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="list-unstyled areaList">
+                                <li>
+                                    <a href="#employerArea1">东区</a>
+                                </li>
+                                <li>
+                                    <a href="#employerArea2">西区</a>
+                                </li>
+                                <li>
+                                    <a href="#employerArea2">南区</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#deviceList2" data-parent="#compSum" data-toggle="collapse">联通</a>
+                        </h4>
+                    </div>
+                    <div id="deviceList2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="list-unstyled areaList">
+                                <li>
+                                    <a href="#employerArea1">区域1</a>
+                                </li>
+                                <li>
+                                    <a href="#employerArea2">区域2</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-sm-10">
+            <table class="table table-bordered">
+                <tr>
+                    <th>设备名称</th>
+                    <th>编号</th>
+                    <th>最后在线时间</th>
+                    <th>在线状态</th>
+                </tr>
+                <tr>
+                    <td>大厅访客机</td>
+                    <td>01</td>
+                    <td>2017-1-22</td>
+                    <td><span class="badge" style="background:red;">离线</span></td>
+                </tr>
+                <tr>
+                    <td>kef访客机</td>
+                    <td>03</td>
+                    <td>2017-1-22</td>
+                    <td><span class="badge" style="background:green;">在线</span></td>
+                </tr>
+                <tr>
+                    <td>西门访客机</td>
+                    <td>02</td>
+                    <td>2017-1-22</td>
+                    <td><span class="badge" style="background:green;">在线</span></td>
+                </tr>
+                <tr>
+                    <td>挂壁访客机</td>
+                    <td>01</td>
+                    <td>2017-1-22</td>
+                    <td><span class="badge" style="background:red;">离线</span></td>
+                </tr>
+                <tr>
+                    <td>北门访客机</td>
+                    <td>01</td>
+                    <td>2017-1-22</td>
+                    <td><span class="badge" style="background:green;">在线</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

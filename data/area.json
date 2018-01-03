@@ -1,0 +1,44 @@
+{
+  "total":100,"rows":[
+    {
+      "id":22,
+      "name":"华东",
+      "areaNum":"02",
+      "creater":"李祥",
+      "createTime":"2016-12-10 13:44:42",
+      "comments":"备注备注"
+    },
+    {
+      "id":23,
+      "name":"华中",
+      "areaNum":"03",
+      "creater":"lifen",
+      "createTime":"2016-12-10 13:44:42",
+      "comments":""
+    },
+    {
+      "id":24,
+      "name":"华西",
+      "areaNum":"04",
+      "creater":"amanda",
+      "createTime":"2016-12-10 13:44:42",
+      "comments":"备注"
+    },
+    {
+      "id":25,
+      "name":"华南",
+      "areaNum":"05",
+      "creater":"李辉",
+      "createTime":"2016-12-10 13:44:42",
+      "comments":"备注备注"
+    },
+    {
+      "id":26,
+      "name":"华北",
+      "areaNum":"06",
+      "creater":"张迪",
+      "createTime":"2016-12-10 13:44:42",
+      "comments":"备注"
+    }
+  ]
+}

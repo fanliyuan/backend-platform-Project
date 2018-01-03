@@ -1,0 +1,18 @@
+{
+  "total":100,"rows":[{
+  "id":1,"follow":1,"status":"进行中","visitor":"徐艳茹","visited":"管理员","startTime":"2017-12-1 12:12:12","endTime":"2017-12-12 15:21:36","logOffTime":"未注销","reason":"开会","company":"dell"
+},
+  {
+    "id":2,"follow":0,"status":"进行中","visitor":"张开","visited":"管理员","startTime":"2017-12-1 12:12:12","endTime":"2017-12-12 15:21:36","logOffTime":"未注销","reason":"开会","company":"钱林恒兴股份科技有限公司"
+  },
+  {
+    "id":3,"follow":0,"status":"进行中","visitor":"李芬芬","visited":"管理员","startTime":"2017-12-1 12:12:12","endTime":"2017-12-12 15:21:36","logOffTime":"未注销","reason":"开会","company":"钱林恒兴股份科技有限公司"
+  },
+  {
+    "id":4,"follow":0,"status":"进行中","visitor":"王辉","visited":"管理员","startTime":"2017-12-1 12:12:12","endTime":"2017-12-12 15:21:36","logOffTime":"未注销","reason":"开会","company":"钱林恒兴股份科技有限公司"
+  },
+  {
+    "id":5,"follow":1,"status":"进行中","visitor":"赵佳","visited":"管理员","startTime":"2017-12-1 12:12:12","endTime":"2017-12-12 15:21:36","logOffTime":"未注销","reason":"开会","company":"钱林恒兴股份科技有限公司"
+  }
+]
+}

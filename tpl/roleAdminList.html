@@ -1,0 +1,333 @@
+<div id="roleAdminList">
+    <div class="contentHeader clearfix">
+        <input type="text" placeholder="昵称/用户名"/>
+        <button class="btn btn-info layoutSearch">搜索</button>
+    </div>
+    <div class="contentMains clearfix">
+        <h4>角色列表 <span>Role list</span></h4>
+        <table id="roleListTable">
+            <!--<tr>-->
+                <!--<th>-->
+                    <!--<input type="checkbox"/>-->
+                <!--</th>-->
+                <!--<th>角色名称</th>-->
+                <!--<th>角色编码</th>-->
+                <!--<th>状态</th>-->
+                <!--<th>拥有的权限</th>-->
+                <!--<th>操作</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td><input type="checkbox"/></td>-->
+                <!--<td>管理员</td>-->
+                <!--<td>7777</td>-->
+                <!--<td>有效</td>-->
+                <!--<td>系统管理员、角色列表</td>-->
+                <!--<td>-->
+                    <!--<i class="glyphicon glyphicon-edit"></i>-->
+                    <!--<a class="adminChoose">选择权限</a>-->
+                    <!--<i class="glyphicon glyphicon-remove"></i>-->
+                    <!--<a class="deleteRole">删除</a>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td><input type="checkbox"/></td>-->
+                <!--<td>部门管理员</td>-->
+                <!--<td>15215654569</td>-->
+                <!--<td>有效</td>-->
+                <!--<td></td>-->
+                <!--<td>-->
+                    <!--<i class="glyphicon glyphicon-edit"></i>-->
+                    <!--<a class="adminChoose">选择权限</a>-->
+                    <!--<i class="glyphicon glyphicon-remove"></i>-->
+                    <!--<a class="deleteRole">删除</a>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td><input type="checkbox"/></td>-->
+                <!--<td>组长</td>-->
+                <!--<td>15465635236</td>-->
+                <!--<td>有效</td>-->
+                <!--<td></td>-->
+                <!--<td>-->
+                    <!--<i class="glyphicon glyphicon-edit"></i>-->
+                    <!--<a class="adminChoose">选择权限</a>-->
+                    <!--<i class="glyphicon glyphicon-remove"></i>-->
+                    <!--<a class="deleteRole">删除</a>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td><input type="checkbox"/></td>-->
+                <!--<td>部长</td>-->
+                <!--<td>13566669845</td>-->
+                <!--<td>有效</td>-->
+                <!--<td>权限列表</td>-->
+                <!--<td>-->
+                    <!--<i class="glyphicon glyphicon-edit"></i>-->
+                    <!--<a class="adminChoose">选择权限</a>-->
+                    <!--<i class="glyphicon glyphicon-remove"></i>-->
+                    <!--<a class="deleteRole">删除</a>-->
+                <!--</td>-->
+            <!--</tr>-->
+        </table>
+        <button class="btnInfo txtBlue" id="addNewRole">新增角色</button>
+    </div>
+    <!-- modal-->
+    <div class="modal fade" id="roleLimitModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">选择权限</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel-group" id="roleLimitPanel">
+                        <!--<div class="panel panel-default">-->
+                            <!--<div class="panel-heading">-->
+                                <!--<h4 class="panel-title">-->
+                                    <!--<input type="checkbox"/>-->
+                                    <!--<a  data-toggle="collapse" href="#roleAdminModal">系统列表</a>-->
+                                <!--</h4>-->
+                            <!--</div>-->
+                            <!--<div class="panel-collapse collapse" id="roleAdminModal">-->
+                                <!--<div class="panel-body">-->
+                                    <!--<ul class="list-unstyled">-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/> 管理员列表-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/> 角色列表-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/> 权限列表-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/> 角色权限分配-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/> 数据权限分配-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="panel panel-default">-->
+                            <!--<div class="panel-heading">-->
+                                <!--<h4 class="panel-title">-->
+                                    <!--<input type="checkbox"/>-->
+                                    <!--<a  data-toggle="collapse" href="#roleLimitCompany">商家列表</a>-->
+                                <!--</h4>-->
+                            <!--</div>-->
+                            <!--<div class="panel-collapse collapse" id="roleLimitCompany">-->
+                                <!--<div class="panel-body">-->
+                                    <!--<ul class="list-unstyled">-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/>商家列表-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/>区域列表-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/>终端列表-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="panel panel-default">-->
+                            <!--<div class="panel-heading">-->
+                                <!--<h4 class="panel-title">-->
+                                    <!--<input type="checkbox"/>-->
+                                    <!--<a href="#roleLimitEmployer" data-toggle="collapse">员工列表</a>-->
+                                <!--</h4>-->
+                            <!--</div>-->
+                            <!--<div class="panel-collapse collapse" id="roleLimitEmployer">-->
+                                <!--<div class="panel-body">-->
+                                    <!--<ul class="list-unstyled">-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/>员工列表-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/>访客列表-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/>访客记录列表-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/>刷卡记录-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/>黑名单列表-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<input type="checkbox"/>设备在线列表-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button class="btn btn-primary" id="roleAdminSave">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- deleteModal-->
+    <div class="modal fade" id="deleteRoleModals" tabindex="-1" role="dialog">
+        <!--<div class="modal-dialog">-->
+        <div class="modal_content">
+            <header class="modal_header">
+                <h5 class="clearfix">
+                    信息
+                    <span class="pull-right" data-dismiss="modal">&times;</span>
+                </h5>
+            </header>
+            <div class="modal_main">
+                确定删除这个选项?
+            </div>
+            <footer class="modal_footer">
+                <button class="btn btn-info" id="deleteRoleSure">确定</button>
+                <button class="btn btn-default"  data-dismiss="modal">取消</button>
+            </footer>
+        </div>
+        <!--</div>-->
+    </div>
+    <!-- addmodal-->
+    <div class="modal fade" id="adminRoleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">新增角色</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <lable class="col-sm-2 control-label" for="">角色名称
+                            </lable>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="roleName" placeholder="请输入角色名称"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-2 control-label" for="">角色编码
+                            </lable>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="roleCode" placeholder="请输入角色编码"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-2 control-label" for="">修改人
+                            </lable>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="adminPassword" placeholder="请输入姓名"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="roleInfoEdit">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //显示roleLimitModal中的列表
+        showModalList();
+        function showModalList(){
+            var html="";
+            var ind="";
+            $.each(mainList,function(i,o){
+                ind="a"+i;
+                html+=`<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><input type="checkbox" class='sums'/><a  data-toggle="collapse" href="#${ind}" data-parent="#roleLimitPanel">${o.name}</a></h4></div><div class="panel-collapse collapse" id="${ind}"><div class="panel-body"><ul class="list-unstyled">`;
+                var str="";
+                $.each(o.child,function(j,obj){
+                    str+=`<li><input type="checkbox" class='indiv'/> ${obj.name}</li>`;
+                })
+                html+=str;
+                html+=`</ul></div></div></div>`;
+            })
+            $("#roleLimitPanel").html(html);
+        }
+        // 给表格中的操作元素的点击事件
+        window.operateEvents={
+            "click a.deleteRole":function(e,value,row,index){
+                e.stopPropagation();
+                $("#deleteRoleModals").modal('show');
+            },
+            "click a.adminChoose":function(e,value,row,index){
+                e.stopPropagation();
+                $("#roleLimitModal").modal('show');
+            }
+        }
+        /* 表格*/
+        $("#roleListTable").bootstrapTable({
+            url:"data/roleTable.json",
+            method:'get',
+            cache:false,
+            pagination:true,
+            sortable:false,
+            sidePagination:"server",
+            pageNumber:1,
+            pageSize:30,
+            search:false,
+            uniqueId:'id',
+            clickToSelect:true,
+            columns:[{
+                field:"checked",
+                checkbox : true
+            },
+                {
+                    field:"roleName",
+                    title:"角色名称"
+                },
+                {
+                    field:"roleCode",
+                    title:"角色编码"
+                },
+                {
+                    field:"status",
+                    title:"状态"
+                },
+                {
+                    field:"oweLimit",
+                    title:"拥有的权限"
+                },
+                {
+                    field:"operation",
+                    title:"操作",
+                    events:operateEvents,
+                    formatter:AddFunctionRole
+                }
+            ]
+        })
+        //                给表格操作列 增加操作的点击元素
+        function AddFunctionRole(value,row,index){
+            return `<i class='glyphicon glyphicon-edit'></i><a class='adminChoose'>选择权限</a><i class='glyphicon glyphicon-remove'></i><a class='deleteRole'>删除</a>`;
+        }
+        //删除弹框的确定点击功能
+        function deleteRoleSure(){
+            $("#deleteRoleSure").click(function(){
+                $('#deleteRoleModals').modal('hide');
+            })
+        }
+        //   删除确定的点击事件
+        deleteRoleSure();
+
+//        checkbox 总和分的点击
+        sumCheck("#roleLimitModal");
+//        选择权限的弹框中保存按钮的点击
+        $("#roleAdminSave").click(function(){
+            $("#roleLimitModal").modal('hide');
+        })
+        $("#addNewRole").click(function(){
+            $("#adminRoleModal").modal("show");
+        })
+        $("#roleInfoEdit").click(function(){
+            $("#adminRoleModal").modal("hide");
+        })
+    </script>
+</div>

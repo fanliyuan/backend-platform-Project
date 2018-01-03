@@ -1,0 +1,305 @@
+<div id="limitList">
+    <div class="contentHeader clearfix">
+    </div>
+    <div class="contentMains clearfix">
+        <h4>权限列表 <span>Permission list</span></h4>
+        <div class="row">
+            <div class="col col-sm-6">
+                <div class="panel-group" id="gr2">
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<h5 class="panel-title">-->
+                                <!--<input type="checkbox"/>-->
+                                <!--<a class="collapsed" data-toggle="collapse" href="#limit_content13" data-parent="#gr2" data-id="1" data-name="" data-oid="">系统列表<span><button class="btn btn-sm edits">修改</button><button class="btn btn-sm deletes">删除</button></span>-->
+                                <!--</a>-->
+                            <!--</h5>-->
+                        <!--</div>-->
+                        <!--<div class="panel-collapse collapse" id="limit_content13">-->
+                            <!--<div class="panel-body">-->
+                                <!--<ul class="list-unstyled adminList">-->
+                                    <!--<li>-->
+                                        <!--<a href="#adminList"  data-id="1" data-name="" data-oid="">管理员列表<span><button class="btn btn-sm edits">修改</button><button class="btn btn-sm deletes">删除</button></span></a>-->
+                                    <!--</li>-->
+                                    <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<a href="#roleList">角色列表</a>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                    <!--<li>-->
+                                        <!--<a href="#roleAdminList">角色列表<span><button class="btn btn-sm edits">修改</button><button class="btn btn-sm deletes">删除</button></span></a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#limitList">权限列表<span><button class="btn btn-sm edits">修改</button><button class="btn btn-sm deletes">删除</button></span></a>-->
+                                    <!--</li>-->
+
+                                    <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<a href="#dataAdminList">数据权限分配</a>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<h5 class="panel-title">-->
+                                <!--<input type="checkbox"/>-->
+                                <!--<a class="collapsed" data-toggle="collapse" href="#limit_content1" data-parent="#gr2">商家列表 </a>-->
+                            <!--</h5>-->
+                        <!--</div>-->
+                        <!--<div class="panel-collapse collapse" id="limit_content1">-->
+                            <!--<div class="panel-body">-->
+                                <!--<ul class="list-unstyled adminList">-->
+                                    <!--<li>-->
+                                        <!--<a href="#">商家列表</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">区域列表</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">终端列表</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<h5 class="panel-title">-->
+                                <!--<input type="checkbox"/>-->
+                                <!--<a class="collapsed" data-toggle="collapse" data-parent="#gr2" href="#limit_content12">员工列表 </a>-->
+                            <!--</h5>-->
+                        <!--</div>-->
+                        <!--<div class="panel-collapse collapse" id="limit_content12">-->
+                            <!--<div class="panel-body">-->
+                                <!--<ul class="list-unstyled adminList">-->
+                                    <!--<li>-->
+                                        <!--<a href="#">员工列表</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">访客列表</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">访客记录列表</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">刷卡记录</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">黑名单列表</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">设备在线列表</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+                <button class="btnInfo txtBlue" id="addLimit">增加权限</button>
+            </div>
+        </div>
+    </div>
+    <!-- 新增的modal-->
+    <div class="modal fade" id="addLimitModal" tabindex="-1" role="dialog">
+        <!--<div class="modal-dialog">-->
+        <div class="modal_content">
+            <header class="modal_header">
+                <h5 class="clearfix">
+                    新增权限
+                    <span class="pull-right" data-dismiss="modal">&times;</span>
+                </h5>
+            </header>
+            <div class="modal_main clearfix">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">内容</label>
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="请输入新增的内容" class="form-control" id="addContent"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">链接</label>
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="请输入对应的链接" class="form-control" id="addHref"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <footer class="modal_footer">
+                <button class="btn btn-info addSure">确定</button>
+                <button class="btn btn-default"  data-dismiss="modal">取消</button>
+            </footer>
+        </div>
+        <!--</div>-->
+    </div>
+    <!-- editModal-->
+    <div class="modal fade" id="editLimits" tabindex="-1" role="dialog">
+        <!--<div class="modal-dialog">-->
+        <div class="modal_content">
+            <header class="modal_header">
+                <h5 class="clearfix">
+                    被修改对象:<span class="editTitle">系统列表</span>
+                    <span class="pull-right" data-dismiss="modal">&times;</span>
+                </h5>
+            </header>
+            <div class="modal_main">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">内容</label>
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="请输入修改后的内容" class="form-control" id="editContent"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">链接</label>
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="请输入修改后的链接" class="form-control" id="editHref"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <footer class="modal_footer">
+                <button class="btn btn-info eiditSure">确定</button>
+                <button class="btn btn-default"  data-dismiss="modal">取消</button>
+            </footer>
+        </div>
+        <!--</div>-->
+    </div>
+    <!-- deleteModal-->
+    <div class="modal fade" id="deleteLimitModals" tabindex="-1" role="dialog">
+        <!--<div class="modal-dialog">-->
+        <div class="modal_content">
+            <header class="modal_header">
+                <h5 class="clearfix">
+                    信息
+                    <span class="pull-right" data-dismiss="modal">&times;</span>
+                </h5>
+            </header>
+            <div class="modal_main">
+                确定删除这个选项?
+            </div>
+            <footer class="modal_footer">
+                <button class="btn btn-info deleteSure">确定</button>
+                <button class="btn btn-default"  data-dismiss="modal">取消</button>
+            </footer>
+        </div>
+        <!--</div>-->
+    </div>
+<script>
+    showPanel();//panel的动态显示
+    var arrs={};//暂存被修改的a的 id、name、oid
+    var deleteId=0;//暂存被删除的a的id
+    var addId=[];//暂存新增父元素的id
+    var addName="";//暂存新增的name
+    var addHref="";//暂存新增的链接
+    function showPanel(){
+        var html="";
+        $.each(mainList,function(i,o){
+            var ind="b"+i;
+            html+=`<div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title"><input type="checkbox" class="isChecked"/>
+<a class="collapsed" data-toggle="collapse" href="#${ind}" data-parent="#gr2" data-id="${o.id}" data-name="${o.name}" data-oid="${o.oid}">${o.name}<span><button class="btn btn-sm edits">修改</button><button class="btn btn-sm deletes">删除</button></span></a></h5></div><div class="panel-collapse collapse" id="${ind}"><div class="panel-body"><ul class="list-unstyled adminList">`;
+            var str="";
+            $.each(o.child,function(j,obj){
+                str+=`<li><a  data-id="${obj.id}" data-name="${obj.name}" data-oid="${obj.oid}">${obj.name}<span><button class="btn btn-sm edits">修改</button><button class="btn btn-sm deletes">删除</button></span></a></li>`;
+            })
+            html+=str;
+            html+=`</ul></div></div></div>`;
+        })
+        $("#gr2").html(html);
+    }
+//    行的鼠标滑入事件
+    $("#limitList").on("mouseover",".panel-group a",function(e){
+        e.stopPropagation();
+        $(this).children("span").css("opacity",1);
+    })
+//   行的鼠标划出事件
+    $("#limitList").on("mouseout",".panel-group a",function(e){
+        e.stopPropagation();
+        $(this).children("span").css("opacity",0);
+    })
+//    修改按钮点击事件
+    $("#limitList").on("click",".panel-group a span button.edits",function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var id=$(this).parent().parent().attr("data-id");
+        var name=$(this).parent().parent().attr("data-name");
+        var oid=$(this).parent().parent().attr("data-oid");//oid为排序列表
+        arrs.id=id;
+        arrs.name=name;
+        arrs.oid=oid;
+        $("#editLimits .modal_header span.editTitle").html(name);
+        $("#editLimits input").val("");
+        $("#editLimits").modal("show");
+    })
+//    删除按钮点击事件
+    $("#limitList").on("click",".panel-group a span button.deletes",function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var id=$(this).parent().parent().attr("data-id");
+        deleteId=id;
+        $("#deleteLimitModals").modal("show");
+    })
+
+//    修改确定按钮点击事件
+    $("#editLimits button.eiditSure").click(function(){
+        arrs.newContent=$("#editContent").val();
+        arrs.newHrefs=$("#editHref").val();
+        if(arrs.newContent.length==0){
+            $("#alerts").html("新输入内容为空！请输入").show();
+            setTimeout(function(){
+                $("#alerts").hide();
+            },2000);
+        }
+        else if(arrs.newHrefs.length==0){
+            $("#alerts").html("新输入链接为空！请输入").show();
+            setTimeout(function(){
+                $("#alerts").hide();
+            },2000);
+        }
+        else {
+            console.log("id:"+arrs.id,"name:"+arrs.name,"oid:"+arrs.oid,"newContent:"+arrs.newContent,"newHrefs:"+arrs.newHrefs);
+            $("#editLimits").modal("hide");
+        }
+    })
+//    删除确定按钮点击事件
+    $("#deleteLimitModals button.deleteSure").click(function(){
+        console.log("要删除的对象的id："+deleteId);
+        $("#deleteLimitModals").modal("hide");
+    })
+//    新增权限
+    $("#addLimit").click(function(){
+        $("#addLimitModal input").val("");
+        $("#addLimitModal").modal("show");
+    })
+//    新增权限的确定按钮的点击事件
+    $("#addLimitModal button.addSure").click(function(){
+        if($("#addContent").val().length==0){
+            $("#alerts").html("新增内容为空！请输入").show();
+            setTimeout(function(){
+                $("#alerts").hide();
+            },2000);
+        }
+        else if($("#addHref").val().length==0){
+            $("#alerts").html("新增链接为空！请输入").show();
+            setTimeout(function(){
+                $("#alerts").hide();
+            },2000);
+        }
+        else{
+            var inputList=$("#gr2 .panel-heading input[type=checkbox]");
+            var content=$("#addContent").val();
+            var hrefs=$("#addHref").val();
+            $.each(inputList,function(i,o){
+                if($(o).prop("checked")){
+                    var id=$(o).siblings("a").attr("data-id");
+                    addId.push(id);
+                }
+            })
+            addName=content;
+            addHref=hrefs;
+            console.log(addId,addName,hrefs);
+            $("#addLimitModal").modal("hide");
+//            重新发ajax请求
+            getMain();
+        }
+    })
+</script>
+</div>

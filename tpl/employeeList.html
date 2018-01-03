@@ -1,0 +1,387 @@
+<div id="employeeList">
+    <div class="contentHeader clearfix">
+        <input type="text" placeholder="公司名称"/>
+        <input type="text" placeholder="员工姓名"/>
+        <input type="text" placeholder="身份证号"/>
+        <button class="btn btn-info layoutSearch">搜索</button>
+    </div>
+    <div class="contentMains clearfix">
+        <h4>员工列表 <span>Employee list</span></h4>
+        <div class="row">
+            <div class="col col-sm-2">
+                <ul id="treeEmployer" class="ztree"></ul>
+                <!--<div class="panel-group" id="compSum">-->
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<h5 class="panel-title">-->
+                                <!--<a href="#comp1" data-parent="#compSum" data-toggle="collapse">联想</a>-->
+                            <!--</h5>-->
+                        <!--</div>-->
+                        <!--<div id="comp1" class="panel-collapse collapse">-->
+                            <!--<div class="panel-body">-->
+                                <!--<ul class="list-unstyled areaList">-->
+                                    <!--<li>-->
+                                        <!--<a href="#">东区</a>-->
+                                        <!--<ul class="list-unstyled deviceAreaList">-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅设备</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅左侧设备</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅右侧设备</a>-->
+                                            <!--</li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">西区</a>-->
+                                        <!--<ul class="list-unstyled deviceAreaList">-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅设备</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅左侧设备</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅右侧设备</a>-->
+                                            <!--</li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">南区</a>-->
+                                        <!--<ul class="list-unstyled deviceAreaList">-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅设备</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅左侧设备</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅右侧设备</a>-->
+                                            <!--</li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<h5 class="panel-title">-->
+                                <!--<a href="#comp2" data-parent="#compSum" data-toggle="collapse">联通</a>-->
+                            <!--</h5>-->
+                        <!--</div>-->
+                        <!--<div id="comp2" class="panel-collapse collapse">-->
+                            <!--<div class="panel-body">-->
+                                <!--<ul class="list-unstyled areaList">-->
+                                    <!--<li>-->
+                                        <!--<a href="#">区域1</a>-->
+                                        <!--<ul class="list-unstyled deviceAreaList">-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅设备</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅左侧设备</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅右侧设备</a>-->
+                                            <!--</li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">区域2</a>-->
+                                        <!--<ul class="list-unstyled deviceAreaList">-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅设备</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅左侧设备</a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                                <!--<a href="#">大厅右侧设备</a>-->
+                                            <!--</li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+            <div class="col col-sm-10" id="treeContent">
+                <table id="employerArea1">
+                    <!--<tr>-->
+                        <!--<th>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</th>-->
+                        <!--<th>公司</th>-->
+                        <!--<th>姓名</th>-->
+                        <!--<th>性别</th>-->
+                        <!--<th>部门</th>-->
+                        <!--<th>身份证号</th>-->
+                        <!--<th>门禁卡号</th>-->
+                        <!--<th>创建时间</th>-->
+                        <!--<th>操作</th>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</td>-->
+                        <!--<td>中海科技公司</td>-->
+                        <!--<td>张荣</td>-->
+                        <!--<td>男</td>-->
+                        <!--<td>市场部</td>-->
+                        <!--<td>1358786125</td>-->
+                        <!--<td>12335655</td>-->
+                        <!--<td>2014-12-23</td>-->
+                        <!--<td><a data-toggle="modal" data-target="#detailEmployeeMoadl">详情</a></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</td>-->
+                        <!--<td>金逸科技有限公司</td>-->
+                        <!--<td>马腾飞</td>-->
+                        <!--<td>男</td>-->
+                        <!--<td>研发部</td>-->
+                        <!--<td>1358786125</td>-->
+                        <!--<td>12335655</td>-->
+                        <!--<td>2014-12-23</td>-->
+                        <!--<td><a class='employerDetail'>详情</a></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</td>-->
+                        <!--<td>恒普有限公司</td>-->
+                        <!--<td>张恒恒</td>-->
+                        <!--<td>女</td>-->
+                        <!--<td>研发部</td>-->
+                        <!--<td>1358786125</td>-->
+                        <!--<td>12335655</td>-->
+                        <!--<td>2014-12-23</td>-->
+                        <!--<td><a href="#">详情</a></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</td>-->
+                        <!--<td>广讯科技有限公司</td>-->
+                        <!--<td>李念</td>-->
+                        <!--<td>女</td>-->
+                        <!--<td>研发部</td>-->
+                        <!--<td>1358786125</td>-->
+                        <!--<td>12335655</td>-->
+                        <!--<td>2014-12-23</td>-->
+                        <!--<td><a href="#">详情</a></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</td>-->
+                        <!--<td>天龙科技股份有限公司</td>-->
+                        <!--<td>张广智</td>-->
+                        <!--<td>女</td>-->
+                        <!--<td>研发部</td>-->
+                        <!--<td>1358786125</td>-->
+                        <!--<td>12335655</td>-->
+                        <!--<td>2014-12-23</td>-->
+                        <!--<td><a href="#">详情</a></td>-->
+                    <!--</tr>-->
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="detailEmployeeMoadl" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">员工详情</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">证件照
+                            </lable>
+                            <div class="col-sm-9">
+                                <img src="image/yz-01-008.png" alt=""/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">姓名
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empName" value="李丽"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">登录账号
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empAccount" value="admin"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="inp1">密码
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empPassword" value="123456"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">性别
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empSex" value="女"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">部门
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empPort" value="研发部"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">身份证号
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empID" value="410158199005265482"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">民族
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empNation" value="汉"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">家庭住址
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empAddress" value="北京市丰台区总部基地"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">身份证签发机构
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empIDHome" value="北京市丰台区公安局"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">手机号码
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empTel" value="15665552365"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">员工卡号
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empCard" value="1122556666"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <lable class="col-sm-3 control-label" for="">创建时间
+                            </lable>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="empCreateTime" value="2017-12-8"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<script src="js/getTree.js"></script>-->
+    <script>
+
+        getTrees();
+$(function(){
+    $("#expandToggle").unbind("click");
+    //        树形结构隐藏和显示功能
+    toggleShow();
+})
+        // 给表格中的操作元素的点击事件
+        window.operateEvents={
+            "click a.employerDetail":function(e,value,row,index){
+                e.stopPropagation();
+                $("#empName").val(row.name);
+                $("#empSex").val(row.sex);
+                $("#empPort").val(row.port);
+                $("#empID").val(row.IDNum);
+                $("#empCard").val(row.card);
+                $("#empCreateTime").val(row.createTime);
+                $("#detailEmployeeMoadl").modal("show");
+            }
+        }
+    //table的显示
+        $("#employerArea1").bootstrapTable({
+            url:"data/employer.json",
+            method:'get',
+            cache:false,
+            pagination:true,
+            sortable:false,
+            sidePagination:"server",
+            pageNumber:1,
+            pageSize:30,
+            search:false,
+            uniqueId:'id',
+            clickToSelect:true,
+            columns:[{
+                field:"checked",
+                checkbox : true
+            },
+                {
+                    field:"company",
+                    title:"公司"
+                },
+                {
+                    field:"name",
+                    title:"姓名"
+                },
+                {
+                    field:"sex",
+                    title:"性别"
+                },
+                {
+                    field:"port",
+                    title:"部门"
+                },
+                {
+                    field:"IDNum",
+                    title:"身份证号"
+                },
+                {
+                    field:"card",
+                    title:"门禁卡号"
+                },
+                {
+                    field:"createTime",
+                    title:"创建时间"
+                },
+                {
+                    field:"operation",
+                    title:"操作",
+                    events:operateEvents,
+                    formatter:AddFunctionAlty
+                }
+            ]
+        })
+//                给表格操作列 增加操作的点击元素
+        function AddFunctionAlty(value,row,index){
+            return `<a class='employerDetail'>详情</a>`;
+        }
+        $(".layoutSearch").click(function(){
+            alert("搜索");
+        })
+    </script>
+</div>

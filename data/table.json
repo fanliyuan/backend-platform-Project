@@ -1,0 +1,7 @@
+{
+ "total":100,"rows":[{
+    "area":"22,23,24","id":1,"company":"1","account":"李丽","accClassify":"子公司","creater":"李文","createTime":"2016-11-10 13:14:12","lastTime":"2017-11-12 12:23:29"
+  },{
+  "area":"","id":2,"company":"2","account":"admin","accClassify":"公司","creater":"李文","createTime":"2016-11-10 13:14:12","lastTime":"2017-11-12 12:23:29"
+  }]
+}

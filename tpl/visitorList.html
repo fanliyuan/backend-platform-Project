@@ -1,0 +1,147 @@
+<div id="visitorList">
+    <div class="contentHeader clearfix">
+        <input type="text" placeholder="访客姓名"/>
+        <button class="btn btn-info layoutSearch">搜索</button>
+    </div>
+    <div class="contentMains clearfix">
+        <h4>访客列表 <span>Visitor list</span></h4>
+        <div class="row">
+            <div class="col col-sm-2">
+                <ul id="treeEmployer" class="ztree"></ul>
+             </div>
+            <div class="col col-sm-10">
+                <table id="visitorTable">
+                    <!--<tr>-->
+                    <!--<th>-->
+                    <!--<input type="checkbox"/>-->
+                    <!--</th>-->
+                    <!--<th>姓名</th>-->
+                    <!--<th>民族</th>-->
+                    <!--<th>性别</th>-->
+                    <!--<th>生日</th>-->
+                    <!--<th>身份证号</th>-->
+                    <!--<th>地址</th>-->
+                    <!--<th>籍贯</th>-->
+                    <!--<th>手机号</th>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>-->
+                    <!--<input type="checkbox"/>-->
+                    <!--</td>-->
+                    <!--<td>张正</td>-->
+                    <!--<td>汉</td>-->
+                    <!--<td>男</td>-->
+                    <!--<td>1991-22-13</td>-->
+                    <!--<td>1358444786125</td>-->
+                    <!--<td>河北省邯郸市磁县</td>-->
+                    <!--<td>磁县公安局</td>-->
+                    <!--<td>13569998562</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>-->
+                    <!--<input type="checkbox"/>-->
+                    <!--</td>-->
+                    <!--<td>李春</td>-->
+                    <!--<td>汉</td>-->
+                    <!--<td>女</td>-->
+                    <!--<td>1991-22-13</td>-->
+                    <!--<td>13587444486125</td>-->
+                    <!--<td>河北省邯郸市磁县</td>-->
+                    <!--<td>磁县公安局</td>-->
+                    <!--<td>13569998562</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>-->
+                    <!--<input type="checkbox"/>-->
+                    <!--</td>-->
+                    <!--<td>李甜甜</td>-->
+                    <!--<td>汉</td>-->
+                    <!--<td>女</td>-->
+                    <!--<td>1991-22-13</td>-->
+                    <!--<td>1358786125</td>-->
+                    <!--<td>河北省邯郸市磁县</td>-->
+                    <!--<td>磁县公安局</td>-->
+                    <!--<td>13569998562</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>-->
+                    <!--<input type="checkbox"/>-->
+                    <!--</td>-->
+                    <!--<td>李旭</td>-->
+                    <!--<td>汉</td>-->
+                    <!--<td>男</td>-->
+                    <!--<td>1991-22-13</td>-->
+                    <!--<td>1358786125</td>-->
+                    <!--<td>河北省邯郸市磁县</td>-->
+                    <!--<td>磁县公安局</td>-->
+                    <!--<td>13569998562</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>-->
+                    <!--<input type="checkbox"/>-->
+                    <!--</td>-->
+                    <!--<td>马雪</td>-->
+                    <!--<td>汉</td>-->
+                    <!--<td>女</td>-->
+                    <!--<td>1991-22-13</td>-->
+                    <!--<td>1358786125</td>-->
+                    <!--<td>河北省邯郸市磁县</td>-->
+                    <!--<td>磁县公安局</td>-->
+                    <!--<td>13569998562</td>-->
+                    <!--</tr>-->
+                </table>
+            </div>
+         </div>
+    </div>
+    <!--<script src="js/getTree.js"></script>-->
+    <script>
+        getTrees();
+        $("#visitorTable").bootstrapTable({
+            url:"data/visitorList.json",
+            method:'get',
+            cache:false,
+            pagination:true,
+            sortable:false,
+            sidePagination:"server",
+            pageNumber:1,
+            pageSize:30,
+            search:false,
+            uniqueId:'id',
+            clickToSelect:true,
+            columns:[
+                {
+                    field:"name",
+                    title:"姓名"
+                },
+                {
+                    field:"nation",
+                    title:"民族"
+                },
+                {
+                    field:"sex",
+                    title:"性别"
+                },
+                {
+                    field:"birthday",
+                    title:"生日"
+                },
+                {
+                    field:"IDNum",
+                    title:"身份证号"
+                },
+                {
+                    field:"address",
+                    title:"地址"
+                },
+                {
+                    field:"birthPlace",
+                    title:"籍贯"
+                },
+                {
+                    field:"tel",
+                    title:"手机号"
+                }
+            ]
+        })
+    </script>
+</div>

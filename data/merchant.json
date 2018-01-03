@@ -1,0 +1,18 @@
+{"total":100,"rows":[
+{
+"id":1,"merchant":"联想","address":"上地三街东口","tel":"45554545511","creater":"lifen","createTime":"2016-1-15 12:45:12","comments":"备注备注备注"
+},
+  {
+    "id":2,"merchant":"戴尔","address":"中关村","tel":"12345564","creater":"张章","createTime":"2016-1-15 12:45:12","comments":""
+  },
+  {
+    "id":3,"merchant":"理想文化有限公司","address":"丰台科技园","tel":"123565112","creater":"王丰","createTime":"2016-1-15 12:45:12","comments":""
+  },
+  {
+    "id":4,"merchant":"钱林恒兴股份科技有限公司","address":"总部基地","tel":"123123333","creater":"amanda","createTime":"2016-1-15 12:45:12","comments":""
+  },
+  {
+    "id":5,"merchant":"惠普","address":"中关村","tel":"123456645","creater":"张刚刚","createTime":"2016-1-15 12:45:12","comments":""
+  }
+]
+}

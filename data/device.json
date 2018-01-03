@@ -1,0 +1,19 @@
+{
+"total":100,"rows":[
+{
+"id":1,"name":"大厅访客机","deviceNum":"01","creater":"张辉","createTime":"2016-1-12 13:12:11","lastTime":"2016-1-12 13:12:11","comments":"备注"
+},
+{
+"id":2,"name":"大厅西侧访客机","deviceNum":"01","creater":"lifen","createTime":"2016-1-12 13:12:11","lastTime":"2016-1-12 13:12:11","comments":"备注"
+},
+{
+"id":3,"name":"大厅中侧访客机","deviceNum":"01","creater":"王平","createTime":"2016-1-12 13:12:11","lastTime":"2016-1-12 13:12:11","comments":"备注"
+},
+{
+"id":4,"name":"大厅南侧访客机","deviceNum":"01","creater":"方丽","createTime":"2016-1-12 13:12:11","lastTime":"2016-1-12 13:12:11","comments":"备注"
+},
+{
+"id":5,"name":"大厅北侧访客机","deviceNum":"01","creater":"赵慧","createTime":"2016-1-12 13:12:11","lastTime":"2016-1-12 13:12:11","comments":"备注"
+}
+]
+}

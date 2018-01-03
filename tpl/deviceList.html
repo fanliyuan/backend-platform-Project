@@ -1,0 +1,136 @@
+<div id="deviceList">
+    <div class="contentHeader clearfix">
+        <input type="text" placeholder="终端名称"/>
+        <button class="btn btn-primary layoutSearch">搜索</button>
+    </div>
+    <div class="contentMains clearfix">
+        <h4>终端列表 <span>Terminal list</span></h4>
+        <div class="row">
+            <div class="col col-sm-2">
+                <ul id="treeEmployer" class="ztree"></ul>
+                <!--<div class="panel-group">-->
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<h5 class="panel-title">-->
+                                <!--<a href="#deviceCom1" data-parent="#compSum" data-toggle="collapse">联想</a>-->
+                            <!--</h5>-->
+                        <!--</div>-->
+                        <!--<div id="deviceCom1" class="panel-collapse collapse">-->
+                            <!--<div class="panel-body">-->
+                                <!--<ul class="list-unstyled areaList">-->
+                                    <!--<li>-->
+                                        <!--<a href="#">南区</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">北区</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">西区</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<h5 class="panel-title">-->
+                                <!--<a href="#deviceCom2" data-parent="" data-toggle="collapse">联通</a>-->
+                            <!--</h5>-->
+                        <!--</div>-->
+                        <!--<div id="deviceCom2" class="panel-collapse collapse">-->
+                            <!--<div class="panel-body">-->
+                                <!--<ul class="list-unstyled areaList">-->
+                                    <!--<li>-->
+                                        <!--<a href="#">区域1</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">区域2</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+            <div class="col col-sm-10">
+                <table id="deviceTable">
+                    <!--<tr>-->
+                        <!--<th>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</th>-->
+                        <!--<th>终端编号</th>-->
+                        <!--<th>终端名称</th>-->
+                        <!--<th>创建人</th>-->
+                        <!--<th>创建时间</th>-->
+                        <!--<th>最后在线时间</th>-->
+                        <!--<th>备注</th>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</td>-->
+                        <!--<td>03</td>-->
+                        <!--<td>大厅访客机</td>-->
+                        <!--<td>李文</td>-->
+                        <!--<td>2016-11-10 13:44:42</td>-->
+                        <!--<td>2016-11-10 13:44:42</td>-->
+                        <!--<td>备注备注备注备注-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--<script src="js/getTree.js"></script>-->
+    <script>
+        getTrees();
+        $(function(){
+            $("#expandToggle").unbind("click");
+            //        树形结构隐藏和显示功能
+            toggleShow();
+        })
+//        表格
+        $("#deviceTable").bootstrapTable({
+            url:"data/device.json",
+            method:'get',
+            cache:false,
+            pagination:true,
+            sortable:false,
+            sidePagination:"server",
+            pageNumber:1,
+            pageSize:30,
+            search:false,
+            uniqueId:'id',
+            clickToSelect:true,
+            columns:[{
+                field:"checked",
+                checkbox : true
+            },
+                {
+                    field:"deviceNum",
+                    title:"终端编号"
+                },
+                {
+                    field:"name",
+                    title:"终端名称"
+                },
+                {
+                    field:"creater",
+                    title:"创建人"
+                },
+                {
+                    field:"createTime",
+                    title:"创建时间"
+                },
+                {
+                    field:"lastTime",
+                    title:"最后登录时间"
+                },
+                {
+                    field:"comments",
+                    title:"备注"
+                }
+            ]
+        })
+    </script>
+</div>

@@ -1,0 +1,121 @@
+<div id="areaList">
+    <div class="contentHeader clearfix">
+        <input type="text" placeholder="区域名称"/>
+        <button class="btn btn-info layoutSearch">搜索</button>
+    </div>
+    <div class="contentMains clearfix">
+        <h4>区域列表 <span>Region list</span></h4>
+        <div class="row">
+            <div class="col col-sm-2">
+                <ul class="list-group" id="areaCompany">
+                    <!--<li class="list-group-item">-->
+                        <!--<a href="#">联想</a>-->
+                    <!--</li>-->
+                    <!--<li class="list-group-item">-->
+                        <!--<a href="#">惠普</a>-->
+                    <!--</li>-->
+                    <!--<li class="list-group-item">-->
+                        <!--<a href="#">钱林</a>-->
+                    <!--</li>-->
+                    <!--<li class="list-group-item">-->
+                        <!--<a href="#">创艺科技</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <div class="col col-sm-10">
+                <table id="areaTable">
+                    <!--<tr>-->
+                        <!--<th>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</th>-->
+                        <!--<th>区域编号</th>-->
+                        <!--<th>区域名称</th>-->
+                        <!--<th>创建人</th>-->
+                        <!--<th>创建时间</th>-->
+                        <!--<th>备注</th>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</td>-->
+                        <!--<td>05</td>-->
+                        <!--<td>上地三街</td>-->
+                        <!--<td>李文</td>-->
+                        <!--<td>2016-11-10 13:44:42</td>-->
+                        <!--<td>备注备注备注备注-->
+                        <!--</td>-->
+
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<input type="checkbox"/>-->
+                        <!--</td>-->
+                        <!--<td>04</td>-->
+                        <!--<td>丰台区</td>-->
+                        <!--<td>李文</td>-->
+                        <!--<td>2016-11-10 13:44:42</td>-->
+                        <!--<td>-->
+                        <!--</td>-->
+
+                    <!--</tr>-->
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $.ajax({
+        method:"get",
+        dataType:"json",
+        url:"data/company.json",
+        success:function(data){
+            var html="";
+            var list=data.company;
+            for(var i=0;i<list.length;i++){
+                html+=`<li class="list-group-item"><a data-index="${list[i].id}">${list[i].name}</a></li>`;
+            }
+            $("#areaCompany").html(html);
+        }
+    })
+    $("#areaCompany").on("click","a",function(){
+        console.log($(this).attr("data-index"));
+    })
+    $("#areaTable").bootstrapTable({
+        url:"data/area.json",
+        method:'get',
+        cache:false,
+        pagination:true,
+        sortable:false,
+        sidePagination:"server",
+        pageNumber:1,
+        pageSize:30,
+        search:false,
+        uniqueId:'id',
+        clickToSelect:true,
+        columns:[{
+            field:"checked",
+            checkbox : true
+        },
+            {
+                field:"areaNum",
+                title:"区域编号"
+            },
+            {
+                field:"name",
+                title:"区域名称"
+            },
+            {
+                field:"creater",
+                title:"创建人"
+            },
+            {
+                field:"createTime",
+                title:"创建时间"
+            },
+            {
+                field:"comments",
+                title:"备注"
+            }
+        ]
+    })
+</script>
